@@ -40,17 +40,19 @@ def main(args):
     args.max_len = min(args.max_len, data_parser.output_max_len)
 
     trainer = train(train_data, val_data, data_parser, args)
-    trainer.evaluate_randomly(data_parser, train_data, args.max_len, n=2)
+    # # print random translations
+    # trainer.evaluate_randomly(data_parser, train_data, args.max_len, n=2)
 
-    # trainer.eval_loss(data_parser, val_data)
-    train_acc = trainer.eval_acc(data_parser, train_data, args.max_len)
-    print('%sTrain acc %.6f%s' % (bcolors.CYAN, train_acc, bcolors.ENDC))
-    val_acc = trainer.eval_acc(data_parser, val_data, args.max_len)
-    print('%sEval acc %.6f%s' % (bcolors.CYAN, val_acc, bcolors.ENDC))
-    val_acc = trainer.eval_acc(data_parser, test_data, args.max_len)
-    print('%sTest acc %.6f%s' % (bcolors.CYAN, val_acc, bcolors.ENDC))
+    # # evaluate trained model
+    # train_acc = trainer.eval_acc(data_parser, train_data, args.max_len)
+    # print('%sTrain acc %.6f%s' % (bcolors.CYAN, train_acc, bcolors.ENDC))
+    # val_acc = trainer.eval_acc(data_parser, val_data, args.max_len)
+    # print('%sEval acc %.6f%s' % (bcolors.CYAN, val_acc, bcolors.ENDC))
+    # val_acc = trainer.eval_acc(data_parser, test_data, args.max_len)
+    # print('%sTest acc %.6f%s' % (bcolors.CYAN, val_acc, bcolors.ENDC))
 
-    trainer.evaluate_randomly(data_parser, val_data, args.max_len, n=2)
+    # # print random translations
+    # trainer.evaluate_randomly(data_parser, val_data, args.max_len, n=2)
 
 
 if __name__ == '__main__':
