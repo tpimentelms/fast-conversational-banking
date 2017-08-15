@@ -57,7 +57,7 @@ $ python train.py --model fasp --epochs 20 --save-dir checkpoint/samantha/fasp
 
 To train all models with default parameters:
 ```bash
-$ source train_models.sh checkpoint/samantha/ data/samantha/dataset.pckl
+$ source train_models.sh <max-epochs>
 ```
 
 ## Eval model
