@@ -59,10 +59,8 @@ class RedFaSP(ReduceCNN):
             return RedFaSPDecoder(
                 output_size, output_len, hidden_size, stride=stride, kernel_size=kernel_size, dropout=dropout, multilinear=multilinear)
         else:
-            assert multilinear is True, 'Invalid option single-linear for single-reduce-cnn'
             return RedMulNetDecoder(
                 hidden_size, output_size, output_len, n_layers=n_layer_dec, kernel_size=kernel_size, dropout=dropout)
-
 
     def get_checkpoint_data(self):
         checkpoint_data = super(RedFaSP, self).get_checkpoint_data()
