@@ -1,6 +1,6 @@
 # Conversational Banking
 
-Implementation of models in paper **Fast Neural Semantic Parsing for Conversational Banking**, if you use this code, please cite this work.
+Implementation of models in paper **Fast and Effective Neural Conversational Banking**, if you use this code, please cite this work.
 
 ## Setup
 
